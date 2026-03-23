@@ -25,3 +25,16 @@ Options:
 - **Show original text first, then swap** — the original question appears immediately, then gets replaced by the paraphrase once ready
 - **Show a loading indicator** — blank or spinner until paraphrase is ready, then show it
 - **Pre-fetch during the previous card** — start generating the paraphrase for the next card while the user is reviewing the current one, so it's ready instantly
+
+**Answer:** Pre-fetch ~15 cards ahead in a background queue. If the user exhausts the prefetch buffer (reviews faster than the LLM generates), fall back to showing the original text for those cards and continue queuing further out. No loading states or visible delays to the user.
+
+---
+
+## Q3: Should paraphrases be cached?
+
+Once a paraphrase is generated for a card, should it be saved and reused, or should a fresh one be generated every review session?
+
+Options:
+- **Always fresh** — new paraphrase every time the card appears (maximum variety, more LLM calls)
+- **Cache N variants per card** — generate and store a fixed number of variants (e.g., 5), cycle through them across sessions (fewer LLM calls over time)
+- **Cache per session only** — generate once per review session, fresh next time Anki opens
