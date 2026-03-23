@@ -102,3 +102,16 @@ Options:
 - **Anki's built-in Tools → Add-ons config** — JSON editor Anki provides for all add-ons; no extra UI to build
 - **Custom settings dialog** — a proper GUI dialog in Anki with labeled fields
 - **Config file only** — a plain JSON/TOML file in the add-on folder; no in-Anki UI
+
+**Answer:** Anki's built-in Tools → Add-ons config. JSON editor, no extra UI to build. Config will expose: `ollama_url`, `model`, and `prefetch_queue_size`.
+
+---
+
+## Q9: Should the paraphrasing feature be toggleable?
+
+Should users be able to turn off paraphrasing (and see original cards) without uninstalling the add-on?
+
+Options:
+- **No toggle** — if the add-on is enabled, paraphrasing is always on
+- **Global on/off** — a menu item or toolbar button to disable paraphrasing session-wide
+- **Per-deck toggle** — enable/disable per deck in deck options
