@@ -65,3 +65,14 @@ Options:
 - **No toggle** — paraphrase is shown, original is never visible during review
 - **Toggle button** — a small button (e.g. "Show original") lets users reveal the original text if confused by the paraphrase
 - **Keyboard shortcut only** — a hotkey reveals the original without cluttering the UI
+
+**Answer:** Small toggle button. Unobtrusive, visible during review, lets users reveal the original question if the paraphrase is confusing.
+
+---
+
+## Q6: Where does the LLM run?
+
+Options:
+- **Local model only** — run a model on the user's machine (e.g. via Ollama); no data leaves the device
+- **Remote API only** — call an external service (e.g. OpenAI, Anthropic); simpler to set up, costs money
+- **User's choice** — configurable; support both local and remote backends
