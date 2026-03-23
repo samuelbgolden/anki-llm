@@ -128,3 +128,5 @@ Options:
 - **No exclusions** — paraphrase everything unless globally toggled off
 - **Exclude by note type** — user specifies note type names to skip (configured in JSON config)
 - **Exclude by tag** — cards tagged e.g. `no-paraphrase` are skipped
+
+**Answer:** Exclude by tag. Cards tagged `no-paraphrase` are skipped and shown as-is. Simple, surgical, requires no config changes — users just tag individual cards in Anki.
