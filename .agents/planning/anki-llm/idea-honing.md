@@ -76,3 +76,16 @@ Options:
 - **Local model only** — run a model on the user's machine (e.g. via Ollama); no data leaves the device
 - **Remote API only** — call an external service (e.g. OpenAI, Anthropic); simpler to set up, costs money
 - **User's choice** — configurable; support both local and remote backends
+
+**Answer:** Local only via Ollama. A one-time setup script (cross-platform Python) handles installing Ollama and pulling the default model. The plugin checks if Ollama is reachable on startup and shows a clear error with setup instructions if not.
+
+---
+
+## Q7: Which model should be the default?
+
+Ollama supports many models. The setup script needs to pull something concrete. What should the default be?
+
+Options:
+- **llama3.2:3b** — small (2 GB), fast on CPU, good quality for simple paraphrasing
+- **mistral:7b** — larger (4 GB), better quality but needs more RAM/GPU
+- **gemma3:4b** — Google's model, similar size to llama3.2, strong instruction following
