@@ -89,3 +89,16 @@ Options:
 - **llama3.2:3b** — small (2 GB), fast on CPU, good quality for simple paraphrasing
 - **mistral:7b** — larger (4 GB), better quality but needs more RAM/GPU
 - **gemma3:4b** — Google's model, similar size to llama3.2, strong instruction following
+
+**Answer:** `gemma3:4b`. The setup script will pull this by default. Users can swap models in the plugin config by changing the model name to any Ollama-compatible model they have installed.
+
+---
+
+## Q8: How should the plugin be configured?
+
+Users may want to tweak settings like the Ollama URL, model name, or prefetch queue size. Where should config live?
+
+Options:
+- **Anki's built-in Tools → Add-ons config** — JSON editor Anki provides for all add-ons; no extra UI to build
+- **Custom settings dialog** — a proper GUI dialog in Anki with labeled fields
+- **Config file only** — a plain JSON/TOML file in the add-on folder; no in-Anki UI
