@@ -115,3 +115,16 @@ Options:
 - **No toggle** — if the add-on is enabled, paraphrasing is always on
 - **Global on/off** — a menu item or toolbar button to disable paraphrasing session-wide
 - **Per-deck toggle** — enable/disable per deck in deck options
+
+**Answer:** Global on/off via a Tools menu item. Persists across sessions (saved to config). When off, cards show as normal with no LLM calls made.
+
+---
+
+## Q10: Any note types or decks that should always be excluded from paraphrasing?
+
+Some cards may not make sense to paraphrase — e.g. cards with heavy formatting, images, code blocks, or language-learning cards where exact wording matters.
+
+Options:
+- **No exclusions** — paraphrase everything unless globally toggled off
+- **Exclude by note type** — user specifies note type names to skip (configured in JSON config)
+- **Exclude by tag** — cards tagged e.g. `no-paraphrase` are skipped
