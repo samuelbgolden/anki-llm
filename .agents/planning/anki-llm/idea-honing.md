@@ -38,3 +38,17 @@ Options:
 - **Always fresh** — new paraphrase every time the card appears (maximum variety, more LLM calls)
 - **Cache N variants per card** — generate and store a fixed number of variants (e.g., 5), cycle through them across sessions (fewer LLM calls over time)
 - **Cache per session only** — generate once per review session, fresh next time Anki opens
+
+**Answer:** Always fresh to start. If latency becomes a real-world problem after testing, introduce caching as an improvement.
+
+---
+
+## Q4: How should cloze deletion cards be handled?
+
+Cloze cards use blanks: e.g. "The {{c1::mitochondria}} is the powerhouse of the cell" — during review the blank is shown as "[...]" and the user must recall the hidden word.
+
+Paraphrasing these is tricky because the blank position is semantically meaningful. Options:
+
+- **Paraphrase around the blank** — reword the surrounding text but keep the blank in place (e.g. "In cellular biology, [...] serves as the cell's power source")
+- **Skip cloze cards entirely** — only paraphrase Basic/standard cards; show cloze cards as-is
+- **Treat as regular text** — send the rendered text (with "[...]") to the LLM and let it rephrase naturally
