@@ -52,3 +52,16 @@ Paraphrasing these is tricky because the blank position is semantically meaningf
 - **Paraphrase around the blank** — reword the surrounding text but keep the blank in place (e.g. "In cellular biology, [...] serves as the cell's power source")
 - **Skip cloze cards entirely** — only paraphrase Basic/standard cards; show cloze cards as-is
 - **Treat as regular text** — send the rendered text (with "[...]") to the LLM and let it rephrase naturally
+
+**Answer:** Paraphrase around the blank. The system prompt sent to the LLM will explain cloze deletions and instruct it to reword the surrounding context while keeping the blank (`[...]`) in a semantically equivalent position.
+
+---
+
+## Q5: Should users be able to see the original card text?
+
+During review, should there be a way to reveal the original (un-paraphrased) question?
+
+Options:
+- **No toggle** — paraphrase is shown, original is never visible during review
+- **Toggle button** — a small button (e.g. "Show original") lets users reveal the original text if confused by the paraphrase
+- **Keyboard shortcut only** — a hotkey reveals the original without cluttering the UI
